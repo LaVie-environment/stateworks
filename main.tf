@@ -23,7 +23,7 @@ resource "aws_s3_bucket" "works_state" {
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "works_state" {
-  bucket = "aws_s3_bucket.works_state"
+  bucket = aws_s3_bucket.works_state.id
 
   rule {
     apply_server_side_encryption_by_default {
