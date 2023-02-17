@@ -42,3 +42,13 @@ resource "aws_dynamodb_table" "works_state" {
     type = "S"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "works-up-and-running-state"
+    key = "global/s3/terraform.tfstate"
+    region = "eu-west-1"
+    dynamodb_table = "works-up-and-running-state"
+    encrypt = true
+  }
+}
