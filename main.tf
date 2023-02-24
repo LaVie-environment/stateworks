@@ -22,6 +22,7 @@ resource "aws_s3_bucket" "works_state" {
         prevent_destroy = true
     }
     */
+    force_destroy = true
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "works_state" {
