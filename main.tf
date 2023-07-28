@@ -48,7 +48,7 @@ resource "aws_dynamodb_table" "works_state" {
   }
 }
 
-
+/*
 terraform {
   backend "s3" {
     bucket = "works-up-and-running-state"
@@ -58,7 +58,7 @@ terraform {
     encrypt = true
   }
 }
-
+*/
 
 
 output "s3_bucket_arn" {
